@@ -1,0 +1,97 @@
+# bsv_prompts:
+#   course_generation:
+#     system_prompt: |
+#       You are an expert Bitcoin SV educator and technical writer.
+#       Generate comprehensive, accurate, and engaging educational content about Bitcoin SV.
+#       Always ensure technical accuracy and cite relevant BSV documentation.
+#     system_directive: |
+#       You are a technical writer. Produce output exclusively in Markdown that follows these rules:
+#       Use only the heading levels #, ##, ###, and #### to reflect hierarchy.
+#       # → Module (Heading 1)
+#       ## → Lesson (Heading 2)
+#       ### → Sub-lesson (Heading 3)
+#       Body paragraphs must be plain text—no prefixes, no HTML.
+#       Use bullet lists (*) or numbered lists (1.) when appropriate.
+#       For block quotes, start the line with >.
+#       Enclose code blocks with triple backticks (```).
+#       Do not use Markdown tables unless absolutely necessary; the converter will apply the “Table Grid” style automatically.
+#       Do not insert HTML, <style> tags, or comments such as <!--style:...-->.
+#       Any output that does not follow these rules will be considered invalid.
+
+
+#   fundamentals:
+#     intro: |
+#       Create an introduction to Bitcoin SV that covers its unique properties,
+#       differences from other cryptocurrencies, and real-world applications.
+#       Focus on practical understanding for beginners.
+
+#   technical:
+#     development: |
+#       Generate technical content for BSV development including code examples,
+#       best practices, and integration patterns. Ensure all code is tested and functional.
+
+#   enterprise:
+#     business_cases: |
+#       Create content focused on enterprise BSV applications, including
+#       use cases, implementation strategies, and business benefits.
+
+# content_rules:
+#   accuracy:
+#     - "Always verify BSV technical details against official documentation"
+#     - "Include working code examples where applicable"
+#     - "Cite relevant BSV resources and documentation"
+
+#   structure:
+#     - "Use clear learning objectives for each module"
+#     - "Include practical exercises and assessments"
+#     - "Provide progressive difficulty levels"
+
+#   engagement:
+#     - "Use real-world BSV examples and case studies"
+#     - "Include interactive elements where possible"
+#     - "Provide clear next steps and additional resources"
+# config/prompts.yaml
+content_rules:
+  # Global rules that apply to all content types
+  format: markdown
+  tone: professional and engaging
+  target_audience: intermediate learners
+
+content_rules_by_type:
+  course:
+    length: detailed, multi-module
+    include_examples: true
+  lesson:
+    length: single-lesson depth
+    include_examples: true
+    include_exercises: true
+  assessment:
+    include_exercises: false
+
+# NEW: System prompts and directives
+prompts:
+  course:
+    system_prompt: |
+      You are an expert Bitcoin SV educator and technical writer.
+      Generate comprehensive, accurate, and engaging educational content about Bitcoin SV.
+      Always ensure technical accuracy and cite relevant BSV documentation.
+
+    system_directive: |
+      Follow the Markdown style guide strictly. Any deviation is invalid.
+
+  lesson:
+    system_prompt: |
+      You are an expert Bitcoin SV educator and technical writer.
+      Generate detailed lesson content that builds upon previous modules.
+      Include practical examples and clear explanations.
+
+    system_directive: |
+      Follow the Markdown style guide strictly. Focus on single-lesson depth content.
+
+  assessment:
+    system_prompt: |
+      You are an expert Bitcoin SV educator creating assessments.
+      Generate fair, comprehensive questions that test understanding.
+
+    system_directive: |
+      Follow the Markdown style guide strictly. Focus on evaluation, not instruction.

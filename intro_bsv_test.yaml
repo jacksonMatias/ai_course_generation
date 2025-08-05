@@ -1,0 +1,12 @@
+course_name: "Introduction to Bitcoin SV Block Chain"
+topic: "Bitcoin SV fundamentals"
+duration: "30 minutes"
+difficulty_level: "beginner"
+target_audience: "Newcomers to BSV"
+
+rules:
+  format: markdown          # salida deseada
+  tone: educational
+  include_examples: true
+  include_exercises: true
+  include_code_examples: true

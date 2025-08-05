@@ -1,0 +1,64 @@
+# Bitcoin SV Knowledge Sources Configuration
+knowledge_bases:
+  official:
+    - name: "Bitcoin SV Academy"
+      url: "https://bitcoinsv.academy"
+      type: "educational"
+    - name: "BSV Blockchain Documentation"
+      url: "https://docs.bsvblockchain.org"
+      type: "technical"
+    - name: "BSV Wiki"
+      url: "https://wiki.bitcoinsv.io"
+      type: "reference"
+
+  development:
+    - name: "BSV SDK Documentation"
+      url: "https://docs.bsv.tools"
+      type: "sdk"
+    - name: "HandCash Connect"
+      url: "https://docs.handcash.io"
+      type: "api"
+    - name: "BSV Merchant API"
+      url: "https://merchantapi.matterpool.io"
+      type: "api"
+
+  enterprise:
+    - name: "nChain Resources"
+      url: "https://nchain.com/resources"
+      type: "enterprise"
+    - name: "BSV Enterprise Blockchain"
+      url: "https://www.bsvblockchain.org/enterprise"
+      type: "business"
+
+mcp_endpoints:
+  - name: "BSV Knowledge Engine"
+    endpoint: "mcp://bsv-knowledge"
+    description: "Bitcoin SV comprehensive knowledge base"
+  - name: "BSV Technical Docs"
+    endpoint: "mcp://bsv-tech-docs"
+    description: "Technical documentation and API references"
+
+course_categories:
+  beginner:
+    - "Introduction to Bitcoin SV"
+    - "Digital Signatures and Transactions"
+    - "BSV Wallet Basics"
+    - "Understanding the Blockchain"
+
+  intermediate:
+    - "BSV Smart Contracts"
+    - "Micropayments and Streaming"
+    - "BSV Development Fundamentals"
+    - "Data Storage on BSV"
+
+  advanced:
+    - "Enterprise BSV Solutions"
+    - "BSV Protocol Deep Dive"
+    - "Scaling and Performance"
+    - "BSV Network Economics"
+
+  specialized:
+    - "BSV for IoT Applications"
+    - "BSV Gaming and NFTs"
+    - "BSV Supply Chain Solutions"
+    - "BSV Identity and Authentication"
